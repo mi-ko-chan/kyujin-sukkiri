@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "version": "0.6.1",
+  "description": "__MSG_extensionDescription__",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://doda.jp/*",
+        "https://employment.en-japan.com/*",
+        "https://tenshoku.mynavi.jp/*"
+      ],
+      "js": [
+        "rules.js",
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "求人すっきりの設定",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "ja"
+}

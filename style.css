@@ -1,0 +1,4 @@
+/* 求人カードだけを非表示にします。再表示ボタンで解除できます。 */
+.jobSearchListLeftArea > .list.ses-filter-hidden {
+  display: none !important;
+}

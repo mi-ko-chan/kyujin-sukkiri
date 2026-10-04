@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <title>求人すっきり</title>
+  <link rel="stylesheet" href="popup.css">
+  <script src="rules.js" defer></script>
+  <script src="popup.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>求人すっきり</h1>
+    <p>DODA・エン転職・マイナビ転職に対応</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <label class="enable">
+        <input id="enabled" type="checkbox" disabled>
+        求人の非表示を有効にする
+      </label>
+
+      <p class="hint">
+        ON／OFFと条件の選択は保存され、開いている一覧にも反映されます。
+      </p>
+    </section>
+
+    <section class="card" aria-label="このページの状態">
+      <p id="page-status" role="status">
+        ページを確認しています…
+      </p>
+
+      <button id="show-all" type="button" disabled>
+        このページだけ全件表示
+      </button>
+
+      <p class="hint">
+        一時表示はページを再読み込みすると解除されます。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>除外する条件</h2>
+
+      <p class="hint">
+        チェックした条件のいずれかに一致する求人を非表示にします。
+      </p>
+
+      <fieldset id="settings" disabled>
+        <legend class="sr-only">除外条件を選ぶ</legend>
+
+        <div id="words"></div>
+
+        <div class="actions">
+          <button type="button" data-preset="all">
+            すべて選択
+          </button>
+
+          <button type="button" data-preset="none">
+            すべて解除
+          </button>
+
+          <button type="button" data-preset="default">
+            初期設定
+          </button>
+        </div>
+      </fieldset>
+
+      <p id="save-status" role="status">
+        設定を読み込んでいます…
+      </p>
+    </section>
+  </main>
+</body>
+</html>
